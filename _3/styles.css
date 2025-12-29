@@ -11,12 +11,21 @@
     --contrast: rgba(189, 189, 189, 1);
 }
 
+/* -----------------------------------------------------
+   Global Reset
+   - Removes default browser spacing
+   - Ensures predictable box sizing
+   ----------------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* -----------------------------------------------------
+   Page Layout
+   - Flex column allows sticky footer behavior
+   ----------------------------------------------------- */
 body {
     display: flex;
     flex-direction: column;
@@ -31,7 +40,10 @@ main p {
     font-size: 1.3rem;
 }
 
-
+/* -----------------------------------------------------
+   Global Typography
+   - Applies UI font to common interactive elements
+   ----------------------------------------------------- */
 header li,
 header a,
 header button {
@@ -42,9 +54,14 @@ header button {
     text-decoration: none;
 }
 
-/* Site Navigation
------------------------------------------------------------------------- */
+/* =====================================================
+   Site Navigation
+   ===================================================== */
 
+/* -----------------------------------------------------
+   Header Container
+   - Flexbox aligns logo left and navigation right
+   ----------------------------------------------------- */
 header {
     display: flex;
     justify-content: flex-end;
@@ -52,29 +69,38 @@ header {
     padding: 20px 10%;
 }
 
+/* Shared header/footer background styling */
 header,
 footer {
     background-color: var(--bg-color);
 
 }
 
+/* -----------------------------------------------------
+   Brand / Logo
+   ----------------------------------------------------- */
 .brand {
     cursor: pointer;
     order: 3;
     margin-left: auto;
 }
 
+/* Center logo content vertically and horizontally */
 .brand h1 a {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* -----------------------------------------------------
+   Navigation Wrapper
+----------------------------------------------------- */
 nav {
     margin-right: 1rem;
     order: 1;
 }
 
+/* Active navigation link state */
 nav ul.nav__links a.active {
     color: var(--hover-color);
 }
@@ -86,24 +112,27 @@ nav ul.nav__links a.active {
     list-style: none;
 }
 
+/* Changes the Gap settings on the first item in the .nav__links li element */
 .nav__links li:nth-child(1) {
     gap: 1rem;
 }
 
+/* Smooth hover transitions for links and auth links */
 .nav__links li a,
 .login__sign-up a {
     transition: all 0.3s ease 0s;
 }
 
+/* Hover accent color */
 .nav__links li a:hover,
 .login__sign-up a:hover {
     color: var(--hover-color);
 }
 
-.cta {
-    order: 2;
-}
-
+/* -----------------------------------------------------
+   Login / Sign-Up Container
+   - Kept separate from nav links for layout clarity
+   ----------------------------------------------------- */
 .login__sign-up {
     display: flex;
     flex-direction: row;
@@ -111,13 +140,21 @@ nav ul.nav__links a.active {
     justify-content: space-evenly;
 }
 
+/* Spacing between login link and button */
 .login__sign-up a {
     margin-right: 0.6rem;
 }
 
-/* Main Content
---------------------------------------------------------------------- */
 
+
+/* =====================================================
+   Main Content
+   ===================================================== */
+
+/* -----------------------------------------------------
+   Centered main content placeholder
+   - Demonstrates layout behavior with sticky footer
+   ----------------------------------------------------- */
 main {
     display: flex;
     flex-direction: column;
@@ -128,10 +165,15 @@ main {
 }
 
 
+/* =====================================================
+   Button Styles
+   ===================================================== */
 
-/* Button Styles
---------------------------------------------------------------------- */
 
+/* -----------------------------------------------------
+   Primary Button Base
+   - Reusable button utility class
+   ----------------------------------------------------- */
 /* An alternate button styling */
 /* button {
     padding: 9px 25px;
@@ -169,15 +211,27 @@ main {
     color: #fff;
 }
 
+/* Button hover state */
 .btn:hover {
     background: rgba(255, 255, 255, 0.05);
     color: var(--hover-color);
     border: 1px solid var(--hover-color);
 }
 
-/* Footer
--------------------------------------------------------------------*/
+/* Primary CTA button variant */
+.cta {
+    order: 2;
+}
 
+/* =====================================================
+   Footer
+   ===================================================== */
+
+
+/* -----------------------------------------------------
+   Sticky Footer
+   - margin-top:auto pushes footer to bottom
+   ----------------------------------------------------- */
 footer {
     color: var(--text-color);
     margin-top: auto;

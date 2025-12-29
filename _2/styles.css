@@ -11,12 +11,22 @@
     --contrast: rgba(189, 189, 189, 1);
 }
 
+
+/* -----------------------------------------------------
+   Global Reset
+   - Removes default browser spacing
+   - Ensures predictable box sizing
+   ----------------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* -----------------------------------------------------
+   Page Layout
+   - Flex column allows sticky footer behavior
+   ----------------------------------------------------- */
 body {
     display: flex;
     flex-direction: column;
@@ -30,6 +40,10 @@ main p {
     font-size: 1.3rem;
 }
 
+/* -----------------------------------------------------
+   Global Typography
+   - Applies UI font to common interactive elements
+   ----------------------------------------------------- */
 header li,
 header a,
 header button {
@@ -40,9 +54,14 @@ header button {
     text-decoration: none;
 }
 
-/* Site Navigation
------------------------------------------------------------------------- */
+/* =====================================================
+   Site Navigation
+   ===================================================== */
 
+/* -----------------------------------------------------
+   Header Container
+   - Flexbox aligns logo left and navigation right
+   ----------------------------------------------------- */
 header {
     display: flex;
     justify-content: flex-end;
@@ -50,48 +69,67 @@ header {
     padding: 20px 10%;
 }
 
+/* Shared header/footer background styling */
 header,
 footer {
     background-color: var(--bg-color);
 
 }
 
+
+/* -----------------------------------------------------
+   Brand / Logo
+   - margin-right:auto pushes nav to the right
+   ----------------------------------------------------- */
 .brand {
     cursor: pointer;
     margin-right: auto;
 }
 
+/* Center logo content vertically and horizontally */
 .brand h1 a {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* -----------------------------------------------------
+   Navigation Wrapper
+----------------------------------------------------- */
 nav {
     margin-right: 0.6rem;
 }
 
+/* Active navigation link state */
 nav ul.nav__links a.active {
     color: var(--hover-color);
 }
 
-
+/* -----------------------------------------------------
+   Navigation Links
+   ----------------------------------------------------- */
 .nav__links {
     display: flex;
     gap: 1rem;
     list-style: none;
 }
 
+/* Smooth hover transitions for links and auth links */
 .nav__links li a,
 .login__sign-up a {
     transition: all 0.3s ease 0s;
 }
 
+/* Hover accent color */
 .nav__links li a:hover,
 .login__sign-up a:hover {
     color: var(--hover-color);
 }
 
+/* -----------------------------------------------------
+   Login / Sign-Up Container
+   - Kept separate from nav links for layout clarity
+   ----------------------------------------------------- */
 .login__sign-up {
     display: flex;
     flex-direction: row;
@@ -99,13 +137,19 @@ nav ul.nav__links a.active {
     justify-content: space-evenly;
 }
 
+/* Spacing between login link and button */
 .login__sign-up a {
     margin-right: 0.6rem;
 }
 
-/* Main Content
---------------------------------------------------------------------- */
+/* =====================================================
+   Main Content
+   ===================================================== */
 
+/* -----------------------------------------------------
+   Centered main content placeholder
+   - Demonstrates layout behavior with sticky footer
+   ----------------------------------------------------- */
 main {
     display: flex;
     flex-direction: column;
@@ -116,10 +160,15 @@ main {
 }
 
 
+/* =====================================================
+   Button Styles
+   ===================================================== */
 
-/* Button Styles
---------------------------------------------------------------------- */
 
+/* -----------------------------------------------------
+   Primary Button Base
+   - Reusable button utility class
+   ----------------------------------------------------- */
 /* An alternate button styling */
 /* button {
     padding: 9px 25px;
@@ -157,15 +206,23 @@ main {
     color: #fff;
 }
 
+
+/* Button hover state */
 .btn:hover {
     background: rgba(255, 255, 255, 0.05);
     color: var(--hover-color);
     border: 1px solid var(--hover-color);
 }
 
-/* Footer
--------------------------------------------------------------------*/
+/* =====================================================
+   Footer
+   ===================================================== */
 
+
+/* -----------------------------------------------------
+   Sticky Footer
+   - margin-top:auto pushes footer to bottom
+   ----------------------------------------------------- */
 footer {
     color: var(--text-color);
     margin-top: auto;
