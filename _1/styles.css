@@ -1,4 +1,17 @@
-/* NavBar 1 Referance Style Sheet */
+/* =====================================================
+   NavBar 1 – Reference Style Sheet
+   Purpose:
+   - Flexbox-based site navigation layout
+   - Desktop-first reference implementation
+   - Framework-free (HTML5 + CSS3 only)
+   ===================================================== */
+
+
+/* -----------------------------------------------------
+   Google Fonts
+   - Montserrat is the primary UI font
+   - Roboto is imported for optional future use
+   ----------------------------------------------------- */
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:500");
 
