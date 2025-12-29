@@ -32,28 +32,6 @@ No JavaScript or external frameworks are required.
 
 ---
 
-## 📁 Project Structure
-
-/
-├── navbar-1/
-│ ├── index.html
-│ └── styles.css
-├── navbar-2/
-│ ├── index.html
-│ └── styles.css
-├── navbar-3/
-│ ├── index.html
-│ └── styles.css
-├── navbar-4/
-│ ├── index.html
-│ └── styles.css
-└── README.md
-
-
-*(Folder names may vary depending on implementation.)*
-
----
-
 ## 🎯 Purpose
 
 - Serve as a **quick reference** for Flexbox-based navbar layouts
