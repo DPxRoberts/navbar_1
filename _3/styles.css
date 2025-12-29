@@ -63,7 +63,7 @@ footer {
 }
 
 nav {
-    margin-right: 0.6rem;
+    margin-right: 1rem;
     order: 1;
 }
 
@@ -73,18 +73,13 @@ nav ul.nav__links a.active {
 
 
 .nav__links {
+    display: flex;
+    gap: 1rem;
     list-style: none;
-
 }
-
-.nav__links li {
-    display: inline-block;
-    padding: 0.5rem 0.6rem;
-}
-
 
 .nav__links li:nth-child(1) {
-    padding: 0 0.6rem 0 0;
+    gap: 1rem;
 }
 
 .nav__links li a,

@@ -71,14 +71,9 @@ nav ul.nav__links a.active {
 
 
 .nav__links {
+    display: flex;
+    gap: 1rem;
     list-style: none;
-
-}
-
-.nav__links li {
-    display: inline-block;
-    padding: 0.5rem 0.6rem;
-
 }
 
 .nav__links li a,
